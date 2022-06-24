@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        RUAHA SECONDARY SCHOOL| Staff</title>
+
+    
+
+    <!--google fonts-->
+     <link rel="stylesheet" href="styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <header class="sub-header" id="header">
+        <nav>
+            <!--this is branding-->
+            <div class="branding">
+        <h1>
+            <a href="#header">RSS</a>
+        </h1>
+            </div>
+            <!--this is navigation-->
+            <div class="nav-links" id="navLinks">
+                <!--this is closing icon-->
+                <i class="fa fa-times" id="hidemenu" onclick="hideMenu()"></i>
+                <ul>
+                    <li>
+                        <a href="index.php">HOME</a>
+                    </li>
+                    <li>
+                        <a href="about.php">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="register.php">REGISTER</a>
+                    </li>
+                    <li>
+                        <a href="alumni.php">ALUMNI</a>
+                    </li>
+                    <li>
+                        <a href="staff.html">STAFF</a>
+                    </li>
+                
+                    <li>
+                        <a href="contact.php">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+            <!--this humberger menu-->
+            <i class="fa fa-bars" id="showmenu"onclick="showMenu()"></i>
+        
+        </nav>
+
+<!--ABOUT US TITLE-->
+<main>
+    <h1>
+        OUR STAFF
+    </h1>
+</main>
+</header>
+<section class="order">
+    <h1>Our Staff</h1>
+    <p>The following are some of our staff</p>
+    <div class="row">
+        <div class="order-col">
+            <img style="height:100%" src="assets/berkey.jpg" alt="Personal Clothers Cleaning">
+            <div class="layer">
+                <h3>
+                    Principal: Berkey Persley
+
+                </h3></div>
+        </div>
+        <div class="order-col">
+            <img style="height:100%;width: 100%;" src="assets/nambuya.jpg" alt="office cleaning">
+    
+            <div class="layer">
+                <h3>
+                    Student Affairs: Nambuya Linda
+            </h3></div>
+        </div>
+        <div class="order-col last">
+            <img style="height: 100%;" src="assets/muhomela.jpg" alt="">
+            <div class="layer"><h3>
+    Academics: Michael Mhomela
+            </h3></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="order-col">
+            <img style="height:100%" src="assets/akyoo.jpg" alt="Personal Clothers Cleaning">
+            <div class="layer">
+                <h3>
+                   Discipline Co: Adolf Ayoo
+                </h3></div>
+        </div>
+
+    </div>
+    </section>
+
+
+<footer>
+    <!-- <h4>
+        Let's Connect
+    </h4>
+    <p class="icons">
+<i class="fa fa-facebook"></i>
+<i class="fa fa-twitter"></i>
+<i class="fa fa-instagram"></i>
+<i class="fa fa-linkedin"></i>
+    </p> -->
+    <p>&copy RUAHA SECONDARY SCHOOL 2022</p>
+</footer>
+ <!--js for toggle menu-->
+    <script>
+        
+        function showMenu(){
+            var navLinks = document.getElementById("navLinks");
+         navLinks.style.right ="0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-300px"
+        }
+
+    </script>
+
+    
+</body>
+</html>

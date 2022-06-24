@@ -1,0 +1,36 @@
+<?php
+$server = 'localhost';
+$database = "ruahaschool";
+$username = "admin";
+$password = "(WM9Ranu]@gALfmi";
+
+$connection = mysqli_connect($server, $username, $password,  $database);
+
+if(mysqli_connect_error()){
+echo mysqli_connect_error();
+exit;
+}
+
+$firsname=$_POST['firstname'];
+$middlename=$_POST['middlename'];
+$lastname=$_POST['lastname'];
+$username=$_POST['username'];
+$dob=$_POST['dob'];
+$cv=$_POST['cv'];
+$email=$_POST['email'];
+$phone=$_POST['phone'];
+$social=$_POST['social'];
+$password=$_POST['password'];
+
+$sql = "INSERT INTO register(Firstname,Middlename,Lastname,Username,DateOfBirth,CV,Email,Phone,Social,Passwords)
+VALUES('$firsname','$middlename','$lastname','$username','$dob','$cv','$email','$phone','$social','$password')";
+
+// $sql = "INSERT INTO test(name) VALUES('NNJJ')";
+
+if(mysqli_query($connection, $sql)){
+    echo"registered successfully";
+    header(redirect: '../alumni.html');
+    }
+ else{echo"ERROR:COULDN'T EXECUTE $sql. " . mysql_error($connection);
+}
+ ?>

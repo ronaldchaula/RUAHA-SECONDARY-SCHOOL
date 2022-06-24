@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> RUAHA SECONDARY SCHOOL| About</title>
+
+    
+
+    <!--google fonts-->
+     <link rel="stylesheet" href="styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <header class="sub-header" id="header">
+        <nav>
+            <!--this is branding-->
+            <div class="branding">
+        <h1>
+            <a href="#header">RSS</a>
+        </h1>
+            </div>
+            <!--this is navigation-->
+            <div class="nav-links" id="navLinks">
+                <!--this is closing icon-->
+                <i class="fa fa-times" id="hidemenu" onclick="hideMenu()"></i>
+                <ul>
+                    <li>
+                        <a href="index.php">HOME</a>
+                    </li>
+                    <li>
+                        <a href="about.php">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="register.php">REGISTER</a>
+                    </li>
+                    <li>
+                        <a href="alumni.php">ALUMNI</a>
+                    </li>
+                    <li>
+                        <a href="staff.html">STAFF</a>
+                    </li>
+                
+                    <li>
+                        <a href="contact.php">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+            <!--this humberger menu-->
+            <i class="fa fa-bars" id="showmenu"onclick="showMenu()"></i>
+        
+        </nav>
+<!--Services-->
+<main>
+    <h1>
+        Services
+    </h1>
+</main>
+</header>
+<!--service content-->
+<section class="service">
+    <h1 class="service-title">RICE FARMING PROCESS</h1>
+    <p class="service-message">Learn how rice is being farmed from this youtube video</p>
+    
+
+       <figure style="margin: auto">
+           <iframe class="video"  src="https://www.youtube.com/embed/YcKkXadbNYw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           <figcaption>
+               Rice Farming Documentary
+           </figcaption>
+       </figure>
+
+    </section>
+        
+    
+    <!--more infor-->
+    
+    
+    <section class="order">
+        <h1>THE WORLD WITHOUT HUNGER IS POSSIBLE</h1>
+        <p>Here is some stats from World Food programme (WFP)</p>
+        <div  class="row serviceExplained">
+ <blockquote style="font-size: medium;">
+     <q class="quotations">
+         The question of how to eradicate global hunger—one of the Sustainable Development Goals—and feed the future world population is a major global societal challenge. To support the formulation of effective policies to ensure global food security, a better understanding of the range of future outcomes and main driving forces is needed. Global assessments have mainly used four broad indicators to measure the various dimensions of food (in)security: food
+     </q>
+ </blockquote>
+        </div>
+        </section>
+<footer>
+    <!-- <h4>
+        Let's Connect
+    </h4>
+    <p class="icons">
+<i class="fa fa-facebook"></i>
+<i class="fa fa-twitter"></i>
+<i class="fa fa-instagram"></i>
+<i class="fa fa-linkedin"></i>
+    </p> -->
+    <p>&copy RUAHA SECONDARY SCHOOL 2022</p>
+</footer>
+ <!--js for toggle menu-->
+    <script>
+        
+        function showMenu(){
+            var navLinks = document.getElementById("navLinks");
+         navLinks.style.right ="0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-300px"
+        }
+
+    </script>
+
+    
+</body>
+</html>

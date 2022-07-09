@@ -31,7 +31,7 @@
         <i class="fa fa-times" id="hidemenu" onclick="hideMenu()"></i>
         <ul>
             <li>
-                <a href="index.html">HOME</a>
+                <a href="index.php">HOME</a>
             </li>
             <li>
                 <a href="about.php">ABOUT</a>

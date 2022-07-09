@@ -48,7 +48,7 @@
                     </li>
                 
                     <li>
-                        <a href="contact.html">CONTACT</a>
+                        <a href="contact.php">CONTACT</a>
                     </li>
                 </ul>
             </div>

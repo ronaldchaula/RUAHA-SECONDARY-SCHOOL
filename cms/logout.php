@@ -150,7 +150,7 @@ else{
         </div>
         <div class="contact-col">
 
-            <form action="../../includes/register.txt" method="post" id="form">
+            <form action="../includes/register.txt" method="post" id="form">
                 <h2 style="margin: 5% auto;text-align:center;color:rgba(68, 148, 68, 0.62)">FILL THE FORM TO REGISTER</h2>
                 <input type="text" name="firstname" id="firstname" required placeholder="Enter first name">
                 <input type="text" name="middlename" id="middlename" required placeholder="Middle name">

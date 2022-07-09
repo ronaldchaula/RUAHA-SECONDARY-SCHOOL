@@ -1,10 +1,76 @@
+<?php
+session_start();
+//include the database connection file
+require "includes/database.php";
+
+//start a session
+$_SESSION['message']=null;
+$_GET['success']=null;
+if (isset($_SESSION['uid'])){
+    header("Location: alumniMemberArea.php");
+}
+//assign request method here
+
+$requestMethod = $_SERVER['REQUEST_METHOD'];
+
+//test if the request method is a POST one and proceed to next steps
+
+if($requestMethod=='POST'){
+
+if(isset($_POST['username']) && isset($_POST['password'])) {
+    //get these values from login form
+
+    $username = $_POST['username'];
+
+    $password = $_POST['password'];
+
+    //check if the user sent the post request
+    $sql = "SELECT * FROM user";
+    $result = mysqli_query($connection, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        // output data of each row
+//        while($row = mysqli_fetch_all($result)) {
+           $Users = mysqli_fetch_all($result,MYSQLI_ASSOC);
+
+               foreach($Users as $user){
+
+              if( $user['Username'] == $username &&  $user['Passwords'] == $password){
+                    $_SESSION['uid'] = $user['userid'];
+                    $_SESSION['username'] = $user['Username'];
+                     header("Location: alumniMemberArea.php?userid=".$_SESSION['uid']."&username=".$_SESSION['username']);
+                 }
+                   else{
+                       $_SESSION['message'] = "Please enter correct login details";
+                   }
+            }
+//
+//
+//
+
+        }
+    } else {
+        $message = "user not found";
+        $_SESSION['loggedin'] = false;
+        header("Location: alumni.php");
+    }
+
+}
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> RUAHA SECONDARY SCHOOL| About</title>
+   
+    <title>
+        RUAHA SECONDARY SCHOOL| Alumni</title>
 
     
 
@@ -55,43 +121,27 @@
             <i class="fa fa-bars" id="showmenu"onclick="showMenu()"></i>
         
         </nav>
-<!--Services-->
+
+<!--ABOUT US TITLE-->
 <main>
     <h1>
-        Services
+        ALUMNI AREA
     </h1>
 </main>
 </header>
-<!--service content-->
-<section class="service">
-    <h1 class="service-title">RICE FARMING PROCESS</h1>
-    <p class="service-message">Learn how rice is being farmed from this youtube video</p>
-    
+    <?php if(false):    ?>
 
-       <figure style="margin: auto">
-           <iframe class="video"  src="https://www.youtube.com/embed/YcKkXadbNYw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-           <figcaption>
-               Rice Farming Documentary
-           </figcaption>
-       </figure>
+        <p><a href="logout.php">
+                <input type="submit" value="LOGOUT">
+            </a></p>
 
-    </section>
-        
-    
-    <!--more infor-->
-    
-    
-    <section class="order">
-        <h1>THE WORLD WITHOUT HUNGER IS POSSIBLE</h1>
-        <p>Here is some stats from World Food programme (WFP)</p>
-        <div  class="row serviceExplained">
- <blockquote style="font-size: medium;">
-     <q class="quotations">
-         The question of how to eradicate global hunger—one of the Sustainable Development Goals—and feed the future world population is a major global societal challenge. To support the formulation of effective policies to ensure global food security, a better understanding of the range of future outcomes and main driving forces is needed. Global assessments have mainly used four broad indicators to measure the various dimensions of food (in)security: food
-     </q>
- </blockquote>
-        </div>
-        </section>
+    <?php else: ?>
+
+        <?php include 'login.php'; ?>
+
+
+    <?php endif;?>
+
 <footer>
     <!-- <h4>
         Let's Connect
@@ -120,3 +170,4 @@
     
 </body>
 </html>
+<?php ?>

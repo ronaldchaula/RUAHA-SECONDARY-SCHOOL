@@ -1,5 +1,5 @@
 <?php
-require '../includes/database.php';
+require 'includes/database.php';
 ?>
 <!DOCTYPE html>
 <html>

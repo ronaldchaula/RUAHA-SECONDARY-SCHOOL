@@ -91,7 +91,7 @@ $_SESSION['message']=null;
      <div class="row" style="display: flex;justify-content: center">
         <div class="contact-col">
 
-<form action="../includes/insert.php" method="post" id="form">
+<form action="includes/insert.php" method="post" id="form">
 <h2 style="margin: 5% auto;text-align:center;color:rgba(68, 148, 68, 0.62)">FILL THE FORM TO REGISTER</h2>
 <input type="text" name="firstname" id="firstname" required placeholder="Enter first name">
 <input type="text" name="middlename" id="middlename" required placeholder="Middle name">
@@ -109,7 +109,7 @@ $_SESSION['message']=null;
                 
 <textarea type="address" name="address" id="address" cols="30" required placeholder="Address" rows="5"></textarea>
 
-<input type="phone" name="phone" id="phone"  required placeholder="Mobile number">
+<input type="tel" name="phone" id="phone"  required placeholder="Mobile number">
 
 <input type="text" name="social" id="social"  placeholder="Social media" required>
 

@@ -3,7 +3,7 @@
     <div class="row" style="display: flex;justify-content: center">
         <div class="contact-col">
 
-            <form  action="alumni.php" method="POST" id="form">
+            <form action="alumni.php" method="POST" id="form">
                 <h2 style="margin: 5% auto;text-align:center;color:rgba(68, 148, 68, 0.62)">ENTER YOUR DETAILS TO LOGIN</h2>
 
                 <div>

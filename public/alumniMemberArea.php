@@ -92,13 +92,13 @@ $result = mysqli_query($connection,$sql);
             width: 100%;
 
         }
-        .minNavLinkList{
+        .minNavLinkList {
             width: 100%;
             display: flex;
 
             justify-content: space-between;
             flex-wrap: wrap;
-
+        }
         .minNavLinkListItem{
         list-style: none;
         }
@@ -110,7 +110,15 @@ $result = mysqli_query($connection,$sql);
             border: none;
             color: inherit;
         }
+        .resultsContainer{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            border: 1px solid  rgba(68, 148, 68, 0.62);
+            text-align: center
+
         }
+
     </style>
 </head>
 <body>
@@ -149,7 +157,7 @@ $result = mysqli_query($connection,$sql);
             </ul>
         </div>
         <!--this humberger menu-->
-        <i class="fa fa-bars" id="showmenu"onclick="showMenu()"></i>
+        <i class="fa fa-bars" id="showmenu" onclick="showMenu()"></i>
 
     </nav>
 
@@ -267,8 +275,8 @@ $result = mysqli_query($connection,$sql);
                     <input type="text" name="headatenrollment" id="headatenrollment" required placeholder="Head teach at enrollment">
                     <input type="text" name="headatgraduation" id="headatgraduation" required placeholder="Head teacher at graduation">
                     <input type="text" name="famousteacher" id="famousteacher" required placeholder="Famous teacher">
-                    <div class="resultsContainer" style="display: flex; justify-content: space-around; flex-wrap: wrap; border: solid 1px black; text-align: center" >
-                        <div>
+                    <div class="resultsContainer" >
+                        <div >
                             <label for="division1">Division 1</label>
                             <input type="radio" name="result" value ="DIV 1" id="division1" required >
                         </div>
@@ -290,7 +298,7 @@ $result = mysqli_query($connection,$sql);
                         </div>
                     </div>
 
-                    <input type="phone" name="currentoccupation" id="currentoccupation"  required placeholder="Current occupation">
+                    <input type="tel" name="currentoccupation" id="currentoccupation"  required placeholder="Current occupation">
 
                     <textarea type="address" name="address" id="address" cols="30" placeholder="Address" rows="5"></textarea>
                     <input type="email" name="email" pattern="[a-zA-Z\@\.a-z" id="email" onkeydown="ValidateEmail()"  placeholder="E-mail" required>

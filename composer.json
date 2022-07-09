@@ -1,0 +1,14 @@
+{
+  "name": "vendor_name/RUAHA SECONDARY SCHOOL",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "chax",
+      "email": "ronald.chaula@live.com"
+    }
+  ],
+  "require": {
+  }
+}

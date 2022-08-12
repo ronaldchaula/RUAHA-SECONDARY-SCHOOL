@@ -3,7 +3,7 @@
 $server = 'localhost';
 $database = "ruahaschool";
 $username = "admin";
-$password = "(WM9Ranu]@gALfmi";
+$password = "sK0AS5BEbGLBmvH0";
 
 $connection = mysqli_connect($server, $username, $password,  $database);
 

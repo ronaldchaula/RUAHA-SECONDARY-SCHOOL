@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
     $email = $_POST['email'];
     $mobile = $_POST['mobile'];
 
-    $sql = "INSERT INTO alumn(firstname,middlename,lastname,enrolledyear,graduationyear,headatenrollment,headatgraduation,famousteacher,result,currentoccupation,address,email,mobile)
+    $sql = "INSERT INTO alumni(firstname,middlename,lastname,enrolledyear,graduationyear,headatenrollment,headatgraduation,famousteacher,result,currentoccupation,address,email,mobile)
 VALUES('$firsname','$middlename','$lastname','$enrolledyear','$graduationyear','$headatenrollment','$headatgraduation','$famousteacher','$result','$currentoccupation','$address','$email','$mobile')";
 
 
@@ -34,7 +34,7 @@ VALUES('$firsname','$middlename','$lastname','$enrolledyear','$graduationyear','
 }
 
 //this fetch data from the database for the table
-$sql = " SELECT * FROM alumn";
+$sql = " SELECT * FROM alumni";
 $result = mysqli_query($connection,$sql);
   if($result === false){
     echo mysqli_error($connection);

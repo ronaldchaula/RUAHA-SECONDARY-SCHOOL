@@ -298,7 +298,7 @@ $result = mysqli_query($connection,$sql);
                         </div>
                     </div>
 
-                    <input type="tel" name="currentoccupation" id="currentoccupation"  required placeholder="Current occupation">
+                    <input type="text" name="currentoccupation" id="currentoccupation"  required placeholder="Current occupation">
 
                     <textarea type="address" name="address" id="address" cols="30" placeholder="Address" rows="5"></textarea>
                     <input type="email" name="email" pattern="[a-zA-Z\@\.a-z" id="email" onkeydown="ValidateEmail()"  placeholder="E-mail" required>

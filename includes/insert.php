@@ -79,8 +79,9 @@ else{
 VALUES('$firsname','$middlename','$lastname','$username','$dob','$cv','$email','$phone','$social','$password')";
 
     if(mysqli_query($connection, $sql)){
-        $message = "registered successfully, now login";
-       header("Location: ../public/alumni.php?success=".$message);
+        $message = "registered successfully";
+        $_SESSION['success'] = $message;
+       header("Location: ../alumni.php?success=".$message);
         }
     else{echo"ERROR:COULDN'T EXECUTE $sql. " . mysqli_error($connection);
         echo "server down checkin later";
